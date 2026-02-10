@@ -54,6 +54,7 @@ st.markdown("""
         background: #f8f9fa;
         padding: 1.5rem;
         border-radius: 10px;
+        color: black;
         border-left: 4px solid #667eea;
         margin: 1rem 0;
     }
@@ -71,6 +72,7 @@ st.markdown("""
         background: white;
         padding: 1rem;
         border-radius: 8px;
+        color: black;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         text-align: center;
     }
@@ -78,7 +80,7 @@ st.markdown("""
     .stats-number {
         font-size: 2rem;
         font-weight: bold;
-        color: #667eea;
+        color: black;
     }
     
     .stats-label {
