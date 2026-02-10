@@ -373,7 +373,7 @@ if convert_button:
             "Jumlah gambar preview",
             min_value=4,
             max_value=20,
-            value=8,
+            value=20,
             step=4,
             help="Pilih berapa gambar yang ingin ditampilkan"
         )
