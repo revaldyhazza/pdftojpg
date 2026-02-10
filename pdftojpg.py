@@ -64,6 +64,7 @@ st.markdown("""
         padding: 1.5rem;
         border-radius: 10px;
         border-left: 4px solid #28a745;
+        color: black;
         margin: 1rem 0;
     }
     
@@ -410,10 +411,9 @@ if convert_button:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #6c757d; padding: 1rem;">
-    <p><strong>💡 Powered by pdf2image & Poppler</strong></p>
+    <p><strong>💡 Powered by pdf2image | Revaldy Hazza Daniswara </strong></p>
     <p style="font-size: 0.9rem;">
         Semua proses dilakukan secara lokal. File Anda tidak disimpan di server. <br>
-        Untuk deployment di Streamlit Cloud, pastikan <code>poppler-utils</code> sudah terinstall.
     </p>
 </div>
 """, unsafe_allow_html=True)
