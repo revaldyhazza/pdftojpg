@@ -115,7 +115,7 @@ st.markdown("""
 st.markdown("""
 <div class="main-header">
     <h1>🖼️ PDF to JPG Converter</h1>
-    <p>Convert semua PDF Anda menjadi gambar JPG berkualitas tinggi</p>
+    <p>Convert PDF ke JPG (.pdf to .jpg)</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -220,7 +220,7 @@ else:
             <li>Klik tombol <strong>"Convert Sekarang"</strong></li>
             <li>Download hasil dalam format ZIP</li>
         </ol>
-        <p><strong>📌 Catatan:</strong> Semua proses dilakukan di browser Anda, file tetap aman!</p>
+        <p><strong>📌 Catatan:</strong> Proses dilakukan di local, jadi tetap aman </p>
     </div>
     """, unsafe_allow_html=True)
     st.stop()
