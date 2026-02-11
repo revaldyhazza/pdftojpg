@@ -7,9 +7,6 @@ import os
 from datetime import datetime
 import time
 
-# ============================================================================
-# PAGE CONFIG & STYLING
-# ============================================================================
 st.set_page_config(
     page_title="PDF & Image Converter",
     page_icon="🔄",
@@ -92,9 +89,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ============================================================================
-# HEADER
-# ============================================================================
 st.markdown("""
 <div class="main-header">
     <h1>🔄 PDF & Image Converter</h1>
@@ -102,11 +96,8 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ============================================================================
-# SIDEBAR - MODE SELECTION
-# ============================================================================
 with st.sidebar:
-    st.header("⚙️ Pilih Mode Konversi")
+    st.header("⚙️ Pilih Konversi")
     
     mode = st.radio(
         "Mode:",
@@ -116,9 +107,6 @@ with st.sidebar:
     
     st.markdown("---")
 
-# ============================================================================
-# PDF to JPG MODE
-# ============================================================================
 if mode == "PDF to JPG":
     with st.sidebar:
         st.markdown("### 🖼️ PDF to JPG")
@@ -236,9 +224,7 @@ if mode == "PDF to JPG":
             if all_images:
                 st.markdown(f'<div class="success-card"><h3>🎉 Berhasil!</h3><p>✅ {len(uploaded_files)} PDF → {total_pages} {output_format}</p><p>⏱️ {elapsed:.1f} detik</p></div>', unsafe_allow_html=True)
                 
-                # Download single file atau ZIP
                 if len(all_images) == 1:
-                    # Single file - download langsung
                     st.download_button(
                         f"⬇️ Download {all_images[0][0]}",
                         all_images[0][1],
@@ -273,9 +259,6 @@ if mode == "PDF to JPG":
     else:
         st.markdown('<div class="info-card"><h4>📖 Cara Pakai:</h4><ol><li>Upload satu atau beberapa file PDF</li><li>Atur DPI & format output</li><li>Klik tombol Convert</li><li>Download file hasil (ZIP jika lebih dari 1 file)</li></ol></div>', unsafe_allow_html=True)
 
-# ============================================================================
-# JPG to PDF MODE
-# ============================================================================
 elif mode == "JPG to PDF":
     with st.sidebar:
         st.markdown("### 📄 JPG to PDF")
@@ -328,7 +311,6 @@ elif mode == "JPG to PDF":
                     
                     img = Image.open(f)
                     
-                    # Convert to RGB jika perlu
                     if img.mode in ('RGBA', 'LA', 'P'):
                         bg = Image.new('RGB', img.size, (255, 255, 255))
                         if img.mode == 'P':
@@ -393,15 +375,14 @@ elif mode == "JPG to PDF":
     else:
         st.markdown('<div class="info-card"><h4>📖 Cara Pakai:</h4><ol><li>Upload satu atau beberapa gambar</li><li>Gambar akan disusun sesuai urutan upload</li><li>Atur kualitas PDF</li><li>Opsional: tentukan nama file PDF</li><li>Klik Buat PDF dan download</li></ol></div>', unsafe_allow_html=True)
 
-# ============================================================================
-# FOOTER
-# ============================================================================
+
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #6c757d; padding: 2rem 0;">
     <p><strong>🔄 PDF & Image Converter</strong></p>
     <p style="font-size: 0.9rem;">
         Semua proses di browser. File tidak disimpan di server.<br>
+        Made by Revaldy Hazza Daniswara | linkedin.com/in/revaldyhazzadaniswara
         PDF → JPG/PNG | JPG/PNG → PDF
     </p>
 </div>
