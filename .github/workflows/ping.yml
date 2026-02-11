@@ -1,0 +1,13 @@
+name: Ping PDFTOJPGETC
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # jalan tiap 15 menit
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Streamlit App
+        run: curl -I https://pdfintojpg.streamlit.app/
