@@ -98,7 +98,7 @@ st.markdown("""
 st.markdown("""
 <div class="main-header">
     <h1>🔄 PDF & Image Converter</h1>
-    <p>Convert PDF ke Gambar atau Gambar ke PDF dengan mudah</p>
+    <p>Convert (.pdf) ke (.jpg) dan sebaliknya</p>
 </div>
 """, unsafe_allow_html=True)
 
