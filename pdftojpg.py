@@ -51,6 +51,7 @@ st.markdown("""
         padding: 1.5rem;
         border-radius: 10px;
         border-left: 4px solid #667eea;
+        color: black;
         margin: 1rem 0;
     }
     
@@ -59,6 +60,7 @@ st.markdown("""
         padding: 1.5rem;
         border-radius: 10px;
         border-left: 4px solid #28a745;
+        color: black;
         margin: 1rem 0;
     }
     
@@ -67,6 +69,7 @@ st.markdown("""
         padding: 1.2rem;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: black
         text-align: center;
         margin: 0.5rem 0;
     }
@@ -87,6 +90,7 @@ st.markdown("""
         margin-top: 2rem;
         padding: 1.5rem;
         background: #f8f9fa;
+        color: black;
         border-radius: 12px;
     }
     
