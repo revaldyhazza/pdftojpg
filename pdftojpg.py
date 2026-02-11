@@ -266,7 +266,7 @@ if mode == "PDF to JPG":
                 
                 # Preview
                 st.markdown("### 🖼️ Preview")
-                prev = st.slider("Jumlah preview", 4, 20, 8, 4, key="prev1")
+                prev = st.slider("Tentukan Jumlah Preview", 4, 50, 20, 4, key="prev1")
                 cols = st.columns(4)
                 for idx, (name, data) in enumerate(all_images[:prev]):
                     cols[idx % 4].image(data, caption=name, use_container_width=True)
