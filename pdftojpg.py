@@ -16,12 +16,14 @@ def check_password():
             st.session_state["password_correct"] = False
 
     if "password_correct" not in st.session_state:
-        st.title("🔐 Private Actuarial App")
+        st.title("PDF/JPG <-> JPG/PDF")
+        st.subheader("Created by Revaldy Hazza Daniswara")
         st.text_input("Enter Access Code", type="password", on_change=password_entered, key="password")
         st.stop()
 
     elif not st.session_state["password_correct"]:
-        st.title("🔐 Private Actuarial App")
+        st.title("PDF/JPG <-> JPG/PDF")
+        st.subheader("Created by Revaldy Hazza Daniswara")
         st.text_input("Enter Access Code", type="password", on_change=password_entered, key="password")
         st.error("Access code incorrect")
         st.stop()
