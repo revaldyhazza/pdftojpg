@@ -7,6 +7,27 @@ import os
 from datetime import datetime
 import time
 
+def check_password():
+    def password_entered():
+        if st.session_state["password"] == st.secrets["ACCESS_CODE"]:
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]
+        else:
+            st.session_state["password_correct"] = False
+
+    if "password_correct" not in st.session_state:
+        st.title("🔐 Private Actuarial App")
+        st.text_input("Enter Access Code", type="password", on_change=password_entered, key="password")
+        st.stop()
+
+    elif not st.session_state["password_correct"]:
+        st.title("🔐 Private Actuarial App")
+        st.text_input("Enter Access Code", type="password", on_change=password_entered, key="password")
+        st.error("Access code incorrect")
+        st.stop()
+
+check_password()
+
 st.set_page_config(
     page_title="PDF & Image Converter",
     page_icon="🔄",
